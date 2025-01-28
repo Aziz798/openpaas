@@ -14,6 +14,7 @@ export default defineConfig({
     },
   },
   build: {
+    target:"es2020",
     terserOptions: {
       compress: {
         drop_console: true,

@@ -6,7 +6,7 @@ import { ColorModeProvider, ColorModeScript } from "@kobalte/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
 import { SolidQueryDevtools } from "@tanstack/solid-query-devtools";
 
-const root = document.getElementById("root")!;
+const root = document.getElementById("root");
 const queryClient = new QueryClient();
 
 render(() => (
@@ -19,4 +19,4 @@ render(() => (
             </QueryClientProvider>
         </ColorModeProvider>
     </>
-), root);
+), root!);

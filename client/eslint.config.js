@@ -3,8 +3,10 @@ import pluginJs from "@eslint/js";
 import pluginSolid from "eslint-plugin-solid";
 import pluginTypescript from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import pluginQuery from "@tanstack/eslint-plugin-query";
 
 export default [
+    ...pluginQuery.configs["flat/recommended"],
     {
         files: ["src/*.{js,jsx,ts,tsx}"],
         languageOptions: {
