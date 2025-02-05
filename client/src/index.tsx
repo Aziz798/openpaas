@@ -7,6 +7,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
 import { SolidQueryDevtools } from "@tanstack/solid-query-devtools";
 
 const root = document.getElementById("root");
+if (root === null) {
+    throw new Error("Root element not found");
+}
 const queryClient = new QueryClient();
 
 render(() => (
@@ -19,4 +22,4 @@ render(() => (
             </QueryClientProvider>
         </ColorModeProvider>
     </>
-), root!);
+), root);

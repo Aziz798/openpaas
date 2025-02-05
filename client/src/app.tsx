@@ -5,6 +5,7 @@ import {
   Suspense,
   Switch,
 } from "solid-js";
+import { ModeToggle } from "./components/theme/mode-toggle";
 
 const fetchUser = async (id: number) => {
   return (await fetch(`https://swapi.dev/api/people/${id}/`)).json();
@@ -16,6 +17,8 @@ export default function App() {
 
   return (
     <div>
+      <ModeToggle/>gzfzef
+      
       <input
         type="number"
         min="1"
