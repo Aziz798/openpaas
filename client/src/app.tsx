@@ -1,40 +1,35 @@
-import {
-  createResource,
-  createSignal,
-  Match,
-  Suspense,
-  Switch,
-} from "solid-js";
-import { ModeToggle } from "./components/theme/mode-toggle";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 
-const fetchUser = async (id: number) => {
-  return (await fetch(`https://swapi.dev/api/people/${id}/`)).json();
-};
 
-export default function App() {
-  const [userId, setUserId] = createSignal<number>();
-  const [user] = createResource(userId, fetchUser);
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <ModeToggle/>gzfzef
-      
-      <input
-        type="number"
-        min="1"
-        placeholder="Enter Numeric Id"
-        onInput={(e) => setUserId(Number(e.currentTarget.value))}
-      />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Match when={user.error}>
-            <span>Error: {user.error.message}</span>
-          </Match>
-          <Match when={user()}>
-            <div>{JSON.stringify(user())}</div>
-          </Match>
-        </Switch>
-      </Suspense>
-    </div>
-  );
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
+
+export default App
