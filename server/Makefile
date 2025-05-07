@@ -61,4 +61,14 @@ watch:
             fi; \
         fi
 
+db-generate:
+	@echo "Generating DB migrations..."
+	@pnpm run db-generate
+
+db-migrate:
+	@echo "Running DB migrations..."
+	@pnpm run db-migrate
+db-studio:
+	@echo "Running DB studio..."
+	@pnpm run db-studio
 .PHONY: all build run test clean watch docker-run docker-down itest
