@@ -13,17 +13,17 @@ importers:
         version: 16.5.0
       drizzle-orm:
         specifier: ^0.43.1
-        version: 0.43.1(@types/pg@8.15.0)(gel@2.1.0)(pg@8.15.6)
+        version: 0.43.1(@types/pg@8.15.1)(gel@2.1.0)(pg@8.15.6)
       pg:
         specifier: ^8.13.1
         version: 8.15.6
     devDependencies:
       '@types/node':
-        specifier: ^22.10.5
-        version: 22.15.14
+        specifier: ^22.15.17
+        version: 22.15.17
       '@types/pg':
-        specifier: ^8.11.10
-        version: 8.15.0
+        specifier: ^8.15.1
+        version: 8.15.1
       drizzle-kit:
         specifier: ^0.31.1
         version: 0.31.1
@@ -332,11 +332,11 @@ packages:
   '@petamoriken/float16@3.9.2':
     resolution: {integrity: sha512-VgffxawQde93xKxT3qap3OH+meZf7VaSB5Sqd4Rqc+FP5alWbpOyan/7tRbOAvynjpG3GpdtAuGU/NdhQpmrog==}
 
-  '@types/node@22.15.14':
-    resolution: {integrity: sha512-BL1eyu/XWsFGTtDWOYULQEs4KR0qdtYfCxYAUYRoB7JP7h9ETYLgQTww6kH8Sj2C0pFGgrpM0XKv6/kbIzYJ1g==}
+  '@types/node@22.15.17':
+    resolution: {integrity: sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==}
 
-  '@types/pg@8.15.0':
-    resolution: {integrity: sha512-JFxVIO0hZCbQXQGbRBQjbRWNCG3CujfEUBD4Ny2l0QqDyE0vqAPiMSyx0AIszMS0KdLZxz2GxZUUF3FBUXhOXA==}
+  '@types/pg@8.15.1':
+    resolution: {integrity: sha512-YKHrkGWBX5+ivzvOQ66I0fdqsQTsvxqM0AGP2i0XrVZ9DP5VA/deEbTf7VuLPGpY7fJB9uGbkZ6KjVhuHcrTkQ==}
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
@@ -769,13 +769,13 @@ snapshots:
   '@petamoriken/float16@3.9.2':
     optional: true
 
-  '@types/node@22.15.14':
+  '@types/node@22.15.17':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/pg@8.15.0':
+  '@types/pg@8.15.1':
     dependencies:
-      '@types/node': 22.15.14
+      '@types/node': 22.15.17
       pg-protocol: 1.9.5
       pg-types: 4.0.2
 
@@ -796,9 +796,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.43.1(@types/pg@8.15.0)(gel@2.1.0)(pg@8.15.6):
+  drizzle-orm@0.43.1(@types/pg@8.15.1)(gel@2.1.0)(pg@8.15.6):
     optionalDependencies:
-      '@types/pg': 8.15.0
+      '@types/pg': 8.15.1
       gel: 2.1.0
       pg: 8.15.6
 

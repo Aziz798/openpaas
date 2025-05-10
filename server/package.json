@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.10.5",
-    "@types/pg": "^8.11.10",
+    "@types/node": "^22.15.17",
+    "@types/pg": "^8.15.1",
     "drizzle-kit": "^0.31.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
