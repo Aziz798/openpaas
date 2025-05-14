@@ -102,6 +102,6 @@
         "skipLibCheck": true /* Skip type checking all .d.ts files. */
     },
     "include": [
-        "cmd/migration-service/**/*.ts",
+        "src/services/db-migrations-service/**/*"
     ]
 }

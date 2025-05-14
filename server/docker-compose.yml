@@ -1,14 +1,15 @@
 services:
-  psql_bp:
+  postgres:
     image: postgres:latest
+    container_name: openpaas-db
     environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: openpaas
     ports:
-      - "${DB_PORT}:5432"
+      - "5432:5432"
     volumes:
-      - psql_volume_bp:/var/lib/postgresql/data
-
+      - postgres_data:/var/lib/postgresql/data
 volumes:
-  psql_volume_bp:
+  postgres_data:
+    driver: local
