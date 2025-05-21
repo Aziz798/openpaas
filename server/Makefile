@@ -27,8 +27,15 @@ docker-down:
 		docker-compose down; \
 	fi
 
+build-auth-service:
+	@echo "Building auth service..."
+	@go build -o bin/auth-service ./src/services/auth-service/cmd/api/main.go
+
+run-auth-service: build-auth-service
+	@echo "Running auth service..."
+	@./bin/auth-service
 
 # Clean the binary
 clean:
 	@echo "Cleaning..."
-	@rm -rf bin 
+	@rm -Force -Recurse .\bin

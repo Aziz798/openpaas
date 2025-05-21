@@ -53,6 +53,49 @@ type UserTable struct {
 	PremiumEndDate   pgtype.Date       `db:"premium_end_date" json:"premium_end_date"`
 	LoginProvider    UserLoginProvider `db:"login_provider" json:"login_provider"`
 	OtpSecret        pgtype.Text       `db:"otp_secret" json:"otp_secret"`
-	CreatedAt        pgtype.Date       `db:"created_at" json:"created_at"`
-	UpdatedAt        pgtype.Date       `db:"updated_at" json:"updated_at"`
+	CreatedAt        pgtype.Timestamp  `db:"created_at" json:"created_at"`
+	UpdatedAt        pgtype.Timestamp  `db:"updated_at" json:"updated_at"`
+}
+
+type ProjectTable struct {
+	ID          pgtype.UUID      `db:"id" json:"id"`
+	Name        pgtype.Text      `db:"name" json:"name"`
+	Description pgtype.Text      `db:"description" json:"description"`
+	StartDate   pgtype.Date      `db:"start_date" json:"start_date"`
+	EndDate     pgtype.Date      `db:"end_date" json:"end_date"`
+	Status      ProjectStatus    `db:"status" json:"status"`
+	CreatedAt   pgtype.Timestamp `db:"created_at" json:"created_at"`
+	UpdatedAt   pgtype.Timestamp `db:"updated_at" json:"updated_at"`
+}
+
+type ProjectMemberTable struct {
+	ID        pgtype.UUID       `db:"id" json:"id"`
+	UserID    pgtype.UUID       `db:"user_id" json:"user_id"`
+	ProjectID pgtype.UUID       `db:"project_id" json:"project_id"`
+	Role      UserRoleInProject `db:"role" json:"role"`
+	CreatedAt pgtype.Timestamp  `db:"created_at" json:"created_at"`
+	UpdatedAt pgtype.Timestamp  `db:"updated_at" json:"updated_at"`
+}
+
+type TaskTable struct {
+	ID          pgtype.UUID      `db:"id" json:"id"`
+	Title       pgtype.Text      `db:"title" json:"title"`
+	Description pgtype.Text      `db:"description" json:"description"`
+	StartDate   pgtype.Date      `db:"start_date" json:"start_date"`
+	EndDate     pgtype.Date      `db:"end_date" json:"end_date"`
+	Status      TaskStatus       `db:"status" json:"status"`
+	UserID      pgtype.UUID      `db:"user_id" json:"user_id"`
+	ProjectID   pgtype.UUID      `db:"project_id" json:"project_id"`
+	CreatedAt   pgtype.Timestamp `db:"created_at" json:"created_at"`
+	UpdatedAt   pgtype.Timestamp `db:"updated_at" json:"updated_at"`
+}
+
+type MessageTable struct {
+	ID        pgtype.UUID      `db:"id" json:"id"`
+	Content   pgtype.Text      `db:"content" json:"content"`
+	SenderID  pgtype.UUID      `db:"sender_id" json:"sender_id"`
+	ProjectID pgtype.UUID      `db:"project_id" json:"project_id"`
+	TaskID    pgtype.UUID      `db:"task_id" json:"task_id"`
+	CreatedAt pgtype.Timestamp `db:"created_at" json:"created_at"`
+	UpdatedAt pgtype.Timestamp `db:"updated_at" json:"updated_at"`
 }
