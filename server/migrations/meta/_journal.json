@@ -8,6 +8,20 @@
       "when": 1747845670345,
       "tag": "0000_past_madame_web",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1747941821849,
+      "tag": "0001_silky_thunderbird",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1747944153371,
+      "tag": "0002_common_smiling_tiger",
+      "breakpoints": true
     }
   ]
 }

@@ -13,6 +13,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/monitor"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 	_ "github.com/joho/godotenv/autoload"
+	"openpaas.tech/server/src/services/auth-service/internal/user"
 )
 
 func (s *AuthServer) RegisterAuthServiceRoutes() {
@@ -47,4 +48,5 @@ func (s *AuthServer) RegisterAuthServiceRoutes() {
 		SkipFailedRequests:     false,
 		SkipSuccessfulRequests: false,
 	}))
+	user.RegisterUserRoutes(api, s.db.DB())
 }

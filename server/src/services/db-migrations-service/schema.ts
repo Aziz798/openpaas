@@ -59,7 +59,7 @@ export const usersTable = pgTable("users", {
     premium_start_date: date(),
     premium_end_date: date(),
     login_provider: userLoginProviders("login_provider").notNull(),
-    otp_secret: varchar({ length: 10 }),
+    otp_secret: varchar({ length: 150 }),
     created_at: timestamp().notNull().defaultNow(),
     updated_at: timestamp().notNull().defaultNow().$onUpdate(() => new Date()),
 }, (table) => [
