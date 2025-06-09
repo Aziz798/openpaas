@@ -1,5 +1,6 @@
 import { Button } from "../ui/button";
 import { CheckSquare } from "lucide-react";
+import { plans } from "@/data/placeholders";
 
 export default function PricingSection() {
     return (
@@ -19,55 +20,7 @@ export default function PricingSection() {
                     </div>
                 </div>
                 <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-3">
-                    {[
-                        {
-                            name: "Starter",
-                            price: "$9",
-                            description:
-                                "Perfect for small teams just getting started",
-                            features: [
-                                "Up to 5 team members",
-                                "Basic task management",
-                                "Video calls (up to 30 min)",
-                                "Team messaging",
-                                "5GB storage",
-                            ],
-                            cta: "Get Started",
-                            popular: false,
-                        },
-                        {
-                            name: "Professional",
-                            price: "$29",
-                            description:
-                                "Ideal for growing teams with advanced needs",
-                            features: [
-                                "Up to 20 team members",
-                                "Advanced task management",
-                                "Unlimited video calls",
-                                "Live code collaboration",
-                                "50GB storage",
-                                "Analytics dashboard",
-                            ],
-                            cta: "Get Started",
-                            popular: true,
-                        },
-                        {
-                            name: "Enterprise",
-                            price: "$99",
-                            description:
-                                "For large organizations requiring premium features",
-                            features: [
-                                "Unlimited team members",
-                                "Custom workflows",
-                                "Advanced security features",
-                                "Dedicated support",
-                                "500GB storage",
-                                "API access",
-                            ],
-                            cta: "Contact Sales",
-                            popular: false,
-                        },
-                    ].map((plan, i) => (
+                    {plans.map((plan, i) => (
                         <div
                             key={i}
                             className={`relative overflow-hidden rounded-lg border ${
