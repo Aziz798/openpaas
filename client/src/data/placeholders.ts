@@ -1,4 +1,6 @@
-export const plans = [
+import type { Plan } from "@/types/data-types";
+
+export const plans: Plan[] = [
     {
         name: "Starter",
         price: "$9",
