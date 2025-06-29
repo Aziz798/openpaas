@@ -1,1 +1,0 @@
-ALTER TABLE "users" ALTER COLUMN "otp_secret" SET DATA TYPE varchar(60);

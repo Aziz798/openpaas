@@ -17,6 +17,7 @@ export const userRoles = pgEnum("user_roles", [
 export const userLoginProviders = pgEnum("user_login_providers", [
     "google",
     "email",
+    "github",
 ]);
 export const projectStatuses = pgEnum("project_statuses", [
     "not_started",

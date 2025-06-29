@@ -1,6 +1,6 @@
 CREATE TYPE "public"."project_statuses" AS ENUM('not_started', 'in_progress', 'completed', 'on_hold', 'cancelled');--> statement-breakpoint
 CREATE TYPE "public"."task_statuses" AS ENUM('not_started', 'in_progress', 'completed', 'on_hold', 'cancelled', 'blocked', 'review', 'testing', 'deployed', 'archived');--> statement-breakpoint
-CREATE TYPE "public"."user_login_providers" AS ENUM('google', 'email');--> statement-breakpoint
+CREATE TYPE "public"."user_login_providers" AS ENUM('google', 'email', 'github');--> statement-breakpoint
 CREATE TYPE "public"."user_role_in_projects" AS ENUM('scrum_master', 'developer', 'qa', 'stakeholder', 'product_owner', 'project_manager');--> statement-breakpoint
 CREATE TYPE "public"."user_roles" AS ENUM('admin', 'user');--> statement-breakpoint
 CREATE TABLE "messages" (
@@ -58,7 +58,7 @@ CREATE TABLE "users" (
 	"premium_start_date" date,
 	"premium_end_date" date,
 	"login_provider" "user_login_providers" NOT NULL,
-	"otp_secret" varchar(10),
+	"otp_secret" varchar(150),
 	"created_at" timestamp DEFAULT now() NOT NULL,
 	"updated_at" timestamp DEFAULT now() NOT NULL,
 	CONSTRAINT "users_email_unique" UNIQUE("email")

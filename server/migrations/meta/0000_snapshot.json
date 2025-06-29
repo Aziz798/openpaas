@@ -1,5 +1,5 @@
 {
-  "id": "ebfb7ea3-b983-4d49-bb9e-7f9f7e0aab9b",
+  "id": "443d1dce-1544-4332-acfc-a25d2543cacd",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -649,7 +649,7 @@
         },
         "otp_secret": {
           "name": "otp_secret",
-          "type": "varchar(10)",
+          "type": "varchar(150)",
           "primaryKey": false,
           "notNull": false
         },
@@ -734,7 +734,8 @@
       "schema": "public",
       "values": [
         "google",
-        "email"
+        "email",
+        "github"
       ]
     },
     "public.user_role_in_projects": {

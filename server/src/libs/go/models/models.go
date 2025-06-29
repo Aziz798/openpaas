@@ -17,6 +17,7 @@ const (
 	UserUserRole                    UserRole          = "user"
 	GoogleUserLoginProvider         UserLoginProvider = "google"
 	EmailUserLoginProvider          UserLoginProvider = "email"
+	GithubUserLoginProvider         UserLoginProvider = "github"
 	ProjectStatusNotStarted         ProjectStatus     = "not_started"
 	ProjectStatusInProgress         ProjectStatus     = "in_progress"
 	ProjectStatusCompleted          ProjectStatus     = "completed"
